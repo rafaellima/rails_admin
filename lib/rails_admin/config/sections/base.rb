@@ -1,6 +1,7 @@
 require 'rails_admin/config/proxyable'
 require 'rails_admin/config/configurable'
 require 'rails_admin/config/has_fields'
+require 'rails_admin/config/has_description'
 require 'rails_admin/config/has_groups'
 
 module RailsAdmin
@@ -12,6 +13,7 @@ module RailsAdmin
         include RailsAdmin::Config::Configurable
 
         include RailsAdmin::Config::HasFields
+        include RailsAdmin::Config::HasDescription
         include RailsAdmin::Config::HasGroups
 
         attr_reader :abstract_model
